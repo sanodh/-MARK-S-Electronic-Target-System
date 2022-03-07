@@ -4,6 +4,8 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Reset from "./Pages/Reset";
 import Dashboard from "./Pages/Dashboard";
+import AddNews from "./Componenet/addNews";
+import Profile from "./Pages/profile";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/reset" element={<Reset />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route exact path="/addNews" element={<AddNews />} />
+          <Route exact path="/profile" element={<Profile />} />
         </Routes>
       </Router>
     </div>

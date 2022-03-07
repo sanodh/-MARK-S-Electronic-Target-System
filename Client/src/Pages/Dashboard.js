@@ -41,13 +41,16 @@ function Dashboard() {
         <div className="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
           <ul className="navbar-nav text-right">
             <li >
-              <a className="nav-link">{name}</a>
+              <a className="nav-link" a href="/addNews">AddNews</a>
+            </li>
+            <li >
+              <a className="nav-link" a href="/profile">{name}</a>
             </li>
             <button className="btn btn-success ml-auto mr-1" onClick={logout}>Log Out</button>
           </ul>
         </div>
       </nav>
-        <News />
+      <News />
     </div >
   );
 }

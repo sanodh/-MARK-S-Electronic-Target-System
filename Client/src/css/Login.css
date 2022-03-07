@@ -1,43 +1,43 @@
-.register {
+.login {
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../Images/Shoot4.jpg");
+  background-image: url("../Images/Shoot1.jpg");
 }
 
-.register__container {
+.login__container {
   display: flex;
-  border:1px solid;
-  border-radius: 5%;
   flex-direction: column;
   text-align: center;
+  border:1px solid;
+  border-radius: 5%;
   background-color: #ffffff;
   padding: 30px;
 }
 
-.register__textBox {
+.login__textBox {
   padding: 10px;
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-.register__btn {
+.login__btn {
   padding: 10px;
   font-size: 18px;
-  border-radius: 10px;
   margin-bottom: 10px;
   border: none;
   color: white;
   background-color: black;
+  border-radius:10px;
 }
 
-.register__google {
+.login__google {
   background-color: #4285f4;
-  border-radius: 10px;
+  border-radius:10px;
 }
 
-.register div {
+.login div {
   margin-top: 7px;
 }
