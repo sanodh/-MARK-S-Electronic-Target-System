@@ -41,7 +41,13 @@ function Dashboard() {
         <div className="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
           <ul className="navbar-nav text-right">
             <li >
-              <a className="nav-link" a href="/addNews">AddNews</a>
+              <a className="nav-link" a href="/news">News</a>
+            </li>
+            <li >
+              <a className="nav-link" a href="/matchl">Match</a>
+            </li>
+            <li >
+              <a className="nav-link" a href="/leaderboard">Leaderboard</a>
             </li>
             <li >
               <a className="nav-link" a href="/profile">{name}</a>

@@ -5,13 +5,13 @@ const news = express.Router();
 
 news.get('/getNews', newsController.getAll)
 
-news.get('/:id', newsController.getById)
+news.get('/news/:id', newsController.getById)
 
 news.post('/createNews', newsController.create)
 
-news.put('/:id', newsController.getByIdandUpdate)
+news.put('/updateNews/:id', newsController.getByIdandUpdate)
 
-news.delete('/:id', newsController.getByIdandDelete)
+news.delete('/deleteNews/:id', newsController.getByIdandDelete)
 
 
 module.exports = news;

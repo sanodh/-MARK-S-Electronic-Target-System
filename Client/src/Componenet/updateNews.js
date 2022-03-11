@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import styles from '../css/AddNews.css';
 import axios from 'axios';
 
 function AddNews() {
   const [title, setTitle] = useState("");
   const [photo, setPhoto] = useState("");
   const [description, setDescription] = useState("");
+
+
 
   let data = {
     title: title,
@@ -33,7 +34,7 @@ function AddNews() {
 
     <div class="container">
       <form class="form" onSubmit={handleSubmit}>
-        <div class="title" className="btn btn-primary">Add News</div>
+        <div class="title">Update News</div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Title</label>
           <input
@@ -65,7 +66,7 @@ function AddNews() {
             required></textarea>
         </div>
 
-        <button type="submit" class="submit">Create News</button>
+        <button type="submit" class="submit">Update News</button>
         <button class="su2" ><a href="/dashboard" class="su2">Back to Dashbord</a></button>
       </form>
     </div>

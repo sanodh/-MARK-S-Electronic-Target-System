@@ -21,6 +21,7 @@ import {
 const firebaseConfig = {
   apiKey: "AIzaSyBvV-0FiwL4hw9AO6cwfSy3r2o9m2FD4M8",
   authDomain: "fir-web-9dd79.firebaseapp.com",
+  databaseURL: "https://fir-web-9dd79-default-rtdb.firebaseio.com",
   projectId: "fir-web-9dd79",
   storageBucket: "fir-web-9dd79.appspot.com",
   messagingSenderId: "776656107377",

@@ -2,18 +2,11 @@ const conn = require('../config');
 const News = require('../models/news');
 
 
-const getAll = (req, res) => {
-    let newsData = conn.firestore().collection('news').get();
-    newsData = JSON.stringify([{ "model": "app.mdl", "pk": 1, "fields": { "name": "test", "rank": 1 } }]);;
-    newsData = JSON.parse(newsData);
+const getAll = async (req, res) => {
+    let newsData = await conn.firestore().collection('news').get();
     let arr = [];
     newsData.forEach(element => {
-        const news = new News({
-            title: element.data().title,
-            photo: element.data().photo,
-            description: element.data().description
-        });
-
+        let news = new News(element.id, element.data().title, element.data().photo, element.data().description);
         arr.push(news);
     });
 
