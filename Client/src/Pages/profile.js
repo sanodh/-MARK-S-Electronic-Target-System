@@ -118,7 +118,7 @@ function Profile() {
                 <div class="col-md-4">
                     <div class="p-3 py-5">
                         <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br />
-                        <div class="col-md-12"><label class="labels">Age</label><input type="text" class="form-control" placeholder="Age" onChange={(e) => setAge(e.target.value)} /></div> <br />
+                        <div class="col-md-12"><label class="labels">age of {name}</label><input type="text" class="form-control" placeholder="Age" onChange={(e) => setAge(e.target.value)} /></div> <br />
                         <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" onChange={(e) => setDescription(e.target.value)} /></div>
                     </div>
                 </div>
