@@ -12,7 +12,7 @@ function Leaderboard() {
                 <br></br>
                 <br></br>
                 <br></br>
-                <h1 className="title">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Leaderboard</h1>
+                <h1 className="title">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;;&emsp;Leaderboard</h1>
                 <br></br>
                 <br></br>
                 <table id="Shooter">
