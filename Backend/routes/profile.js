@@ -13,5 +13,4 @@ profile.put('/updateProfile/:id', profileController.getByIdandUpdate)
 
 profile.delete('/deleteProfile/:id', profileController.getByIdandDelete)
 
-
 module.exports = profile;

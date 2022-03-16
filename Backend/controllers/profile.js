@@ -30,7 +30,7 @@ const getById = async (req, res) => {
 }
 
 const create = async (req, res) => {
-    await conn.firestore().collection('profile').doc().set(req.body);
+    await conn.firestore().collection('profile').doc(req.body.name).set(req.body);
     res.json({ message: "profile created" });
 }
 

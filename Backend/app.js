@@ -2,6 +2,7 @@ const express = require("express");
 const cors=require("cors");
 const news = require('./routes/news');
 const profile = require('./routes/profile');
+const match = require('./routes/match');
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(news);
 app.use(profile);
+app.use(match);
 
 app.listen(8000, (req,res)=>{
     console.info(`App running on port 8000`)

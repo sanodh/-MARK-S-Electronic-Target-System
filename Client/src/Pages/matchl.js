@@ -5,26 +5,29 @@ import "firebase/database";
 function Matchl() {
 
     return (
-        <div>
-            <body>
-                <div class="form">
-                    <form action="#" autocomplete="on">
-                        <h1 id="login">Login To Match</h1>
-                        <div class="inputdata">
-                            <div id="matchinfo">
-                                <i id="icon" class="im im-mail"></i>
-                                <input id="match" type="text" placeholder="Match ID" required />
-                            </div>
-                            <div id="passwordinfo">
-                                <i id="icon" class="im im-lock"></i>
-                                <input id="password" type="password" placeholder="Password" required />
-                            </div>
-                        </div>
-                        <button id="submit">Login</button>
-                        <button id="submit"><a href="/dashboard" class="text-decoration-none">Dashboard</a></button>
-                    </form>
+        <div className="container">
+            <form className="form" >
+                <h2 className="text-center">Login to match</h2>
+                <div className="form-group">
+                    <label for="exampleFormControlInput1">Match ID</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="matchid"
+                        required />
                 </div>
-            </body>
+                <div className="form-group">
+                    <label for="exampleFormControlInput1">Name</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="name"
+                        required />
+                </div>
+
+                <button type="submit" className="submit">Login to match</button>
+                <button className="su2" ><a href="/dashboard" className="su2">Back to Dashbord</a></button>
+            </form>
         </div>
     );
 }

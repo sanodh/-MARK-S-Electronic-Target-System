@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import "../css/Profile.css";
+import { Link } from "react-router-dom"
 import { auth, db, logout, registerWithEmailAndPassword } from "../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import "firebase/database";
 import axios from 'axios';
 
 function Profile() {
+
+
     const [user, loading, error] = useAuthState(auth);
     const [name, setName] = useState("");
     const [email, setemail] = useState("");
@@ -21,7 +24,6 @@ function Profile() {
     const [state, setState] = useState("");
     const [age, setAge] = useState("");
     const [description, setDescription] = useState("");
-
 
     const profile = () => {
         if (!name) alert("Please enter name");
@@ -62,22 +64,22 @@ function Profile() {
         state: state,
         age: age,
         description: description,
-      };
+    };
 
-      let handleSubmit = async (e) => {
+    let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          let res = await axios.post("http://localhost:8000/createprofile", data);
-          if (res.status === 200) {
-            console.log(data);
-            alert("Profile created successfully");
-          } else {
-            alert("Some error occured");
-          }
+            let res = await axios.post("http://localhost:8000/createprofile", data);
+            if (res.status === 200) {
+                console.log(data);
+                alert("Profile created successfully");
+            } else {
+                alert("Some error occured");
+            }
         } catch (err) {
-          console.log(err);
+            console.log(err);
         }
-      };
+    };
 
 
     return (
@@ -96,27 +98,28 @@ function Profile() {
                             <h4 class="text-right">Profile Settings</h4>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" onChange={(e) => setName(e.target.value)} value={name} readOnly/></div>
+                            <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" onChange={(e) => setName(e.target.value)} value={name} readOnly /></div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number"  onChange={(e) => setmobileNum(e.target.value)}/></div>
-                            <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" placeholder="enter address line 1"  onChange={(e) => setAddress(e.target.value)}/></div>
-                            <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" onChange={(e) => setemail(e.target.value)} placeholder="enter email id" value={email} readOnly/></div>
-                            <div class="col-md-12"><label class="labels">School/Club Name</label><input type="text" class="form-control" placeholder="enter your school or club name"  onChange={(e) => setOrganization(e.target.value)}/></div>
+                            <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" onChange={(e) => setmobileNum(e.target.value)} /></div>
+                            <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" placeholder="enter address line 1" onChange={(e) => setAddress(e.target.value)} /></div>
+                            <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" onChange={(e) => setemail(e.target.value)} placeholder="enter email id" value={email} readOnly /></div>
+                            <div class="col-md-12"><label class="labels">School/Club Name</label><input type="text" class="form-control" placeholder="enter your school or club name" onChange={(e) => setOrganization(e.target.value)} /></div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country"  onChange={(e) => setCountry(e.target.value)}/></div>
-                            <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" placeholder="state"  onChange={(e) => setState(e.target.value)}/></div>
+                            <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" onChange={(e) => setCountry(e.target.value)} /></div>
+                            <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" placeholder="state" onChange={(e) => setState(e.target.value)} /></div>
                         </div>
                         <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button" onClick={handleSubmit}>Save Profile</button></div>
+                        <div class="mt-5 text-center"><button class="btn btn-light profile-button" type="button" ><Link to={`/vprofile/${name}`} >Profile</Link></button></div>
                         <div class="mt-5 text-center"><button class="btn btn-light profile-button" type="button" ><a href="/dashboard" class="text-decoration-none">Dashboard</a></button></div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-3 py-5">
                         <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br />
-                        <div class="col-md-12"><label class="labels">Age</label><input type="text" class="form-control" placeholder="Age"  onChange={(e) => setAge(e.target.value)}/></div> <br />
-                        <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details"  onChange={(e) => setDescription(e.target.value)}/></div>
+                        <div class="col-md-12"><label class="labels">Age</label><input type="text" class="form-control" placeholder="Age" onChange={(e) => setAge(e.target.value)} /></div> <br />
+                        <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" onChange={(e) => setDescription(e.target.value)} /></div>
                     </div>
                 </div>
             </div>
