@@ -18,7 +18,6 @@ const getById = async (req, res) => {
     res.json(matchData.data());
 }
 
-
 const create = async (req, res) => {
     await conn.firestore().collection('match').doc().set(req.body);
     res.json({ message: "Match created" });
