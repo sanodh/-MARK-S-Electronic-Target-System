@@ -19,12 +19,12 @@ function Leaderboard() {
                     <tr>
                         <th>Place</th>
                         <th>Name</th>
-                        <th>Shot 1</th>
-                        <th>Shot 2</th>
-                        <th>Shot 3</th>
-                        <th>Shot 4</th>
-                        <th>Shot 5</th>
-                        <th>Shot 6</th>
+                        <th>Shot 1 to 10</th>
+                        <th>Shot 10 to 20</th>
+                        <th>Shot 20 to 30</th>
+                        <th>Shot 30 to 40</th>
+                        <th>Shot 40 to 50</th>
+                        <th>Shot 50 to 60</th>
                         <th>Shot 7</th>
                         <th>Shot 8</th>
                         <th>Shot 9</th>
