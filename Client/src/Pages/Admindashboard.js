@@ -48,7 +48,7 @@ function AdminDashboard() {
             <button type="button" class="btn btn-primary btn-lg btn-block" >
                 <a href="/addMatch" class="text-decoration-none text-white">Add Match</a></button>
             <button type="button" class="btn btn-primary btn-lg btn-block" >
-                <a href="/adminmatch" class="text-decoration-none text-white">Manage Match</a></button>
+                <a href="/match" class="text-decoration-none text-white">Manage Match</a></button>
             <button type="button" class="btn btn-warning btn-lg btn-block" >
                 <a href="/dashboard" class="text-decoration-none text-white">Dashboard</a></button>
             <button type="button" class="btn btn-danger btn-lg btn-block" onClick={logout}>Log Out</button>
