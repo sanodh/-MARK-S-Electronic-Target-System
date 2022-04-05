@@ -29,11 +29,14 @@ function News() {
 
   return (
     <div>
-      <button className="btn btn-llight">
-        <a href="/addNews" className="btn btn-primary">Add News </a> &nbsp; &nbsp; &nbsp; &nbsp;
-        <a href="/dashboard" className="btn btn-primary">Dashboard </a>
-      </button>
-      <div className="card-columns">{newsComponent()}</div>
+      <br></br>
+      <button type="button" class="btn btn-primary btn-lg btn-block" >
+        <a href="/addNews" class="text-decoration-none text-white">Add News</a></button>
+      <button type="button" class="btn btn-primary btn-lg btn-block" >
+        <a href="/dashboard" class="text-decoration-none text-white">Dashboard</a></button>
+      <br></br>
+      <br></br>
+      <div className="card-columns" class="mx-auto">{newsComponent()}</div>
     </div>
   );
 }
