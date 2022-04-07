@@ -8,17 +8,6 @@ function AdminMatch(props) {
 
     const id = props.id;
 
-    useEffect(() => {
-        fetch("http://localhost:8000/getMatch")
-            .then((response) => {
-                return response.json();
-            })
-            .then((responseData) => {
-                setMatch(responseData);
-            });
-        console.log(match);
-    }, []);
-
     const onDelete = () => {
         if (window.confirm("Do you want to delete this")) {
             axios.delete(`http://localhost:8000/deleteMatch/${id}`).then((res) => {
@@ -29,21 +18,19 @@ function AdminMatch(props) {
             alert("Record not deleted");
         }
     }
-
-    const matchComponent = () => {
-        return match.map((match) => {
+    
             return (
                 <div className="card mb-3" >
                     <div className="card-body">
-                        <h5 className="card-title" class="text-center">{match.matchname}</h5>
-                        <p className="card-text" class="text-center">{match.description}</p>
+                        <h5 className="card-title" class="text-center">{props.matchname}</h5>
+                        <p className="card-text" class="text-center">{props.description}</p>
                         <p className="card-text" class="text-center">
                             <small className="text-muted" >Join Now</small>
                         </p>
                     </div>
                     <div class="col text-center">
                         <button className="btn btn-success">
-                            <Link to={`/updateMatch`} className="btn btn-success">Edit
+                            <Link to={`/updateMatch/${id}`} className="btn btn-success">Edit
                             </Link>
                         </button>
                         &nbsp;
@@ -57,10 +44,7 @@ function AdminMatch(props) {
                     <br></br>
                 </div>
             );
-        });
-    };
-
-    return <div class="card-columns">{matchComponent()}</div>;
+ 
 }
 
 export default AdminMatch;
