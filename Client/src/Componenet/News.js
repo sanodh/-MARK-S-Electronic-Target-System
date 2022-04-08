@@ -18,7 +18,7 @@ function News() {
   const newsComponent = () => {
     return news.map((news) => {
       return (
-        <div className="card mb-3">
+        <div className="card mb-3" >
           <img className="card-img-top" alt="..." src={news.photo} />
           <div className="card-body">
             <h5 className="card-title">{news.title}</h5>
@@ -32,7 +32,7 @@ function News() {
     });
   };
 
-  return <div class="card-columns">{newsComponent()}</div>;
+  return <div className="card-columns" class="mx-auto">{newsComponent()}</div>;
 }
 
 export default News;
