@@ -35,7 +35,7 @@ const UpdateNews = () => {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await axios.put(`http://localhost:8000//updateNews/${params.id}`, data);
+      let res = await axios.put(`http://localhost:8000/updateNews/${params.id}`, data);
       if (res.status === 200) {
         console.log(data);
         alert("News updated successfully");
@@ -57,8 +57,8 @@ const UpdateNews = () => {
           <input
             className="form-control"
             id="title"
-            defaultValue={news.title}
-            onChange={(e) => setTitle(e.target.defaultValue)}
+            value={news.title}
+            onChange={(e) => setTitle(e.target.value)}
             required />
         </div>
         <div className="form-group">
@@ -67,8 +67,8 @@ const UpdateNews = () => {
             type="text"
             className="form-control"
             id="photo"
-            defaultValue={news.photo}
-            onChange={(e) => setPhoto(e.target.defaultValue)}
+            value={news.photo}
+            onChange={(e) => setPhoto(e.target.value)}
             required />
         </div>
         <div className="form-group">
@@ -77,8 +77,8 @@ const UpdateNews = () => {
             className="form-control"
             id="description"
             rows="3"
-            defaultValue={news.description}
-            onChange={(e) => setDescription(e.target.defaultValue)}
+            value={news.description}
+            onChange={(e) => setDescription(e.target.value)}
             required></textarea>
         </div>
 
