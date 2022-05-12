@@ -39,19 +39,23 @@ function AdminDashboard() {
             <br></br>
             <br></br>
             <br></br>
-            <button type="button" class="btn btn-primary btn-lg btn-block" >
-                <a href="/news" class="text-decoration-none text-white">News</a></button>
-            <button type="button" class="btn btn-primary btn-lg btn-block" >
-                <a href="/leaderboard" class="text-decoration-none text-white">Leaderboard</a></button>
-            <button type="button" class="btn btn-primary btn-lg btn-block" >
-                <a href="/mprofile" class="text-decoration-none text-white">Manage Profile</a></button>
-            <button type="button" class="btn btn-primary btn-lg btn-block" >
-                <a href="/addMatch" class="text-decoration-none text-white">Add Match</a></button>
-            <button type="button" class="btn btn-primary btn-lg btn-block" >
-                <a href="/match" class="text-decoration-none text-white">Manage Match</a></button>
-            <button type="button" class="btn btn-warning btn-lg btn-block" >
-                <a href="/dashboard" class="text-decoration-none text-white">Dashboard</a></button>
-            <button type="button" class="btn btn-danger btn-lg btn-block" onClick={logout}>Log Out</button>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <button type="button" class="btn btn-outline-success btn-lg btn-block" style={{ color: 'primary' }}>
+                <a href="/news" class="text-decoration-none text-black">News</a></button>
+            <button type="button" class="btn btn-outline-success btn-lg btn-block" >
+                <a href="/leaderboard" class="text-decoration-none text-black">Leaderboard</a></button>
+            <button type="button" class="btn btn-outline-success btn-lg btn-block" >
+                <a href="/mprofile" class="text-decoration-none text-black">Manage Profile</a></button>
+            <button type="button" class="btn btn-outline-success btn-lg btn-block" >
+                <a href="/addMatch" class="text-decoration-none text-black">Add Match</a></button>
+            <button type="button" class="btn btn-outline-success btn-lg btn-block" >
+                <a href="/match" class="text-decoration-none text-black">Manage Match</a></button>
+            <button type="button" class="btn btn-outline-warning btn-lg btn-block" >
+                <a href="/dashboard" class="text-decoration-none text-black">Dashboard</a></button>
+            <button type="button" class="btn btn btn-outline-danger btn-lg btn-block" onClick={logout}>Log Out</button>
 
         </div >
     );
