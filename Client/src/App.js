@@ -15,6 +15,7 @@ import Mprofile from "./Pages/Mprofile";
 import Matchl from "./Pages/matchl";
 import News from "./Pages/News";
 import UpdateNews from "./Componenet/updateNews";
+import Admindashboard from "./Pages/Admindashboard";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route exact path="/matchl" element={<Matchl />} />
           <Route exact path="/news" element={<News />} />
           <Route exact path="/updateNews/:id" element={<UpdateNews />} />
+          <Route exact path="/admindashboard" element={<Admindashboard />} />
         </Routes>
       </Router>
     </div>

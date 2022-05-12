@@ -92,3 +92,14 @@ const UpdateNews = () => {
 
 export default UpdateNews;
 
+
+
+
+console.log("Process 1")
+const process2 = () => {
+setTimeout(() =>{ console.log("Process 2")
+}, 2000)
+}
+process2()
+console.log("Process 3")
+
