@@ -5,6 +5,7 @@ import "../css/Dashboard.css";
 import { auth, db, logout } from "../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import News from "../Componenet/News";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   const [user, loading, error] = useAuthState(auth);
@@ -35,6 +36,8 @@ function Dashboard() {
     <div>
       <nav className="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
         <a className="navbar-brand">Dashboard</a>&emsp;&emsp;&emsp;&emsp;
+
+        
         <button
           className="navbar-toggler"
           type="button"

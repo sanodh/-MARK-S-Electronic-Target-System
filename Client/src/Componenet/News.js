@@ -18,6 +18,7 @@ function News() {
   const newsComponent = () => {
     return news.map((news) => {
       return (
+
         <div className="card mb-3" >
           <img className="card-img-top" alt="..." src={news.photo} />
           <div className="card-body">
@@ -28,6 +29,7 @@ function News() {
             </p>
           </div>
         </div>
+        
       );
     });
   };
