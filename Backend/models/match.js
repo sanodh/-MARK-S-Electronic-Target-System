@@ -1,4 +1,4 @@
-class Match {
+ class Match {
     constructor(id, matchname, matchid, description){
         this.id=id,
         this.matchname=matchname,

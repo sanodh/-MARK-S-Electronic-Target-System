@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { axios } from "axios";
 
+
 function Mprofile() {
     const [profile, setprofile] = useState([]);
     const Params = useParams();
@@ -21,7 +22,7 @@ function Mprofile() {
 
     const onDelete = () => {
         if (window.confirm("Do you want to delete this")) {
-            axios.delete(`http://localhost:8000/deleteMatch/${params.id}`).then((res) => {
+            axios.delete(`http://localhost:8000/deleteMatch/${Params.id}`).then((res) => {
                 alert("Deleted successfuly");
             })
         }
