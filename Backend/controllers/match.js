@@ -5,7 +5,12 @@ const getAll = async (req, res) => {
     let matchData = await conn.firestore().collection('match').get();
     let arr = [];
     matchData.forEach(element => {
-        let match = new Match(element.id, element.data().matchname, element.data().matchid, element.data().description);
+        let match = new Match(
+            element.id, 
+            element.data().matchname, 
+            element.data().matchid, 
+            element.data().description
+            );
         arr.push(match);
     });
 

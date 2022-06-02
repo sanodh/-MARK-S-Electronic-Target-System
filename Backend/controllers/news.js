@@ -6,7 +6,12 @@ const getAll = async (req, res) => {
     let newsData = await conn.firestore().collection('news').get();
     let arr = [];
     newsData.forEach(element => {
-        let news = new News(element.id, element.data().title, element.data().photo, element.data().description);
+        let news = new News(
+            element.id, 
+            element.data().title, 
+            element.data().photo, 
+            element.data().description
+            );
         arr.push(news);
     });
 
