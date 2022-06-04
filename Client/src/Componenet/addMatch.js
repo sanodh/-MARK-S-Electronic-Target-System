@@ -72,7 +72,7 @@ function AddMatch() {
                 </div>
 
                 <button type="submit" class="submit">Create Match</button>
-                <button class="su2" ><a href="/dashboard" class="su2">Back to Dashbord</a></button>
+                <button class="su3" ><a href="/dashboard" class="su3">Back to Dashbord</a></button>
             </form>
         </div>
 

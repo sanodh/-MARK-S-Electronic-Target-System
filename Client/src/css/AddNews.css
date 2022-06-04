@@ -114,10 +114,11 @@ body {
   font-size: 18px;
   height: 50px;
   margin-top: 38px;
-   outline: 0;
+  outline: 0;
   text-align: center;
   width: 100%;
 }
+
 .su2 {
   background-color: #08d;
   border-radius: 12px;
@@ -128,11 +129,28 @@ body {
   font-size: 18px;
   height: 50px;
   margin-top: 38px;
-   outline: 0;
+  outline: 0;
   text-align: center;
   width: 100%;
   text-decoration: none;
 }
+
+.su3 {
+  background-color: rgb(240, 255, 104);
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+}
+
 .submit:active {
   background-color: #06b;
 }

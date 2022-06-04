@@ -1,5 +1,5 @@
 body {
-    background: rgb(99, 39, 120)
+    background: rgb(255, 255, 255)
 }
 
 .form-control:focus {
@@ -8,12 +8,12 @@ body {
 }
 
 .profile-button {
-    background: rgb(99, 39, 120);
+    background: rgb(255, 255, 255);
     box-shadow: none;
     border: none
 }
 .profile-button1 {
-    background: rgb(99, 39, 120);
+    background: rgb(255, 255, 255);
     box-shadow: none;
     border: none;
     text-decoration: none;
@@ -21,33 +21,33 @@ body {
 }
 
 .profile-button:hover {
-    background: #682773
+    background: rgb(255, 255, 255)
 }
 
 .profile-button:focus {
-    background: #682773;
+    background: rgb(255, 255, 255);
     box-shadow: none
 }
 
 .profile-button:active {
-    background: #682773;
+    background: rgb(255, 255, 255);
     box-shadow: none
 }
 .profile-button1:hover {
-    background: #682773
+    background: rgb(255, 255, 255)
 }
 
 .profile-button1:focus {
-    background: #682773;
+    background: rgb(255, 255, 255);
     box-shadow: none
 }
 
 .profile-button1:active {
-    background: #682773;
+    background: rgb(255, 255, 255);
     box-shadow: none
 }
 .back:hover {
-    color: #682773;
+    color: rgb(255, 255, 255);
     cursor: pointer
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 .add-experience:hover {
-    background: #BA68C8;
+    background: rgb(255, 255, 255);
     color: #fff;
     cursor: pointer;
     border: solid 1px #BA68C8
