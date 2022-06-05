@@ -23,6 +23,7 @@ const UpdateNews = () => {
       });
   }
 
+
   retriewData();
 
 
@@ -52,32 +53,38 @@ const UpdateNews = () => {
     <div className="container">
       <form className="form" onSubmit={handleSubmit}>
         <div className="title">Update News</div>
+
         <div className="form-group">
           <label for="exampleFormControlInput1">Title</label>
           <input
+          placeholder={news.title}
             className="form-control"
             id="title"
-            value={news.title}
+            defaultValue=""
             onChange={(e) => setTitle(e.target.value)}
             required />
         </div>
+
         <div className="form-group">
           <label for="exampleFormControlInput1">Photo URL</label>
           <input
+          placeholder={news.photo}
             type="text"
             className="form-control"
             id="photo"
-            value={news.photo}
+            defaultvalue=""
             onChange={(e) => setPhoto(e.target.value)}
             required />
         </div>
+
         <div className="form-group">
           <label for="exampleFormControlTextarea1">Description</label>
           <textarea
+          placeholder={news.description}
             className="form-control"
             id="description"
             rows="3"
-            value={news.description}
+            defaultValue=""
             onChange={(e) => setDescription(e.target.value)}
             required></textarea>
         </div>

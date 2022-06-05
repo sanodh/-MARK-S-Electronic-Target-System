@@ -19,22 +19,29 @@ function News() {
     return news.map((news) => {
       return (
 
-        <div className="card mb-3" >
-          <img className="card-img-top" alt="..." src={news.photo} />
-          <div className="card-body">
-            <h5 className="card-title">{news.title}</h5>
-            <p className="card-text">{news.description}</p>
-            <p className="card-text">
-              <small className="text-muted">Last updated 5 mins ago</small>
-            </p>
+        <div class="card-deck" style={{ width: "41.2rem", height: "38rem" }}>
+          <div class="card">
+            <img
+              className="card-img-top"
+              style={{ height: "26rem" }}
+              alt="..."
+              src={news.photo}
+            />
+            <div className="card-body">
+              <h5 className="card-title">{news.title}</h5>
+              <p className="card-text">{news.description}</p>
+              <p className="card-text">
+                <small className="text-muted">last updated 5 mins ago</small>
+              </p>
+            </div>
           </div>
         </div>
-        
+
       );
     });
   };
 
-  return <div className="card-columns" class="mx-auto">{newsComponent()}</div>;
+  return <div className="card-group">{newsComponent()}</div>;
 }
 
 export default News;

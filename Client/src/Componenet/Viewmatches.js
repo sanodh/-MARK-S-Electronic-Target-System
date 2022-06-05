@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Match from '../Componenet/matches'
 
 function Viewmatches() {
     const [match, setMatch] = useState([]);
@@ -19,29 +19,12 @@ function Viewmatches() {
     const matchComponent = () => {
         return match.map((match) => {
             return (
-                <div className="card mb-3" >
-                    <div className="card-body">
-                        <h5 className="card-title" class="text-center">{match.matchname}</h5>
-                        <p className="card-text" class="text-center">{match.description}</p>
-                        <p className="card-text" class="text-center">
-                            <small className="text-muted" >Join Now</small>
-                        </p>
-                    </div>
-                    <div class="col text-center">
-                        <button className="btn btn-success">
-                            <Link to={"/matchl"} className="btn btn-success">Join Now
-                            </Link>
-                        </button>
-
-                    </div>
-                    <br></br>
-                    <br></br>
-                </div>
+               <Match name={match.matchname} description={match.description} id={match.id} />
             );
         });
     };
 
-    return <div class="card-columns">{matchComponent()}</div>;
+    return <div class="card-deck" style={{ width: '100rem' }}>{matchComponent()}</div>;
 }
 
 export default Viewmatches;

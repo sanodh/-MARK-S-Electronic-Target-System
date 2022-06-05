@@ -32,9 +32,17 @@ function AddNews() {
   return (
 
     <div class="container">
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+          <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <form class="form" onSubmit={handleSubmit}>
-        <div class="title" className="btn btn-primary">Add News</div>
-        <div class="form-group">
+
+      <div class="form-group">
           <label for="exampleFormControlInput1">Title</label>
           <input
             type="text"
@@ -44,6 +52,7 @@ function AddNews() {
             onChange={(e) => setTitle(e.target.value)}
             required />
         </div>
+
         <div class="form-group">
           <label for="exampleFormControlInput1">Photo URL</label>
           <input
@@ -54,6 +63,7 @@ function AddNews() {
             onChange={(e) => setPhoto(e.target.value)}
             required />
         </div>
+
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Description</label>
           <textarea
@@ -65,8 +75,8 @@ function AddNews() {
             required></textarea>
         </div>
 
-        <button type="submit" class="submit">Create News</button>
-        <button class="su2" ><a href="/dashboard" class="su2">Back to Dashbord</a></button>
+        <button type="submit" class="submit">Create News &emsp; <i class="fa-solid fa-bullhorn"></i></button>
+        <button class="su2" ><a href="/dashboard" class="su2">Back to Dashbord &emsp; <i class="fa-solid fa-house"></i></a></button>
       </form>
     </div>
 

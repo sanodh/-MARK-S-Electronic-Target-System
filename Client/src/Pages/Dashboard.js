@@ -41,29 +41,23 @@ function Dashboard() {
 
        </button>
        <div className="collapse navbar-collapse flex-grow-0" id="navbarSuportedContent">
-         <ui className="navbar-nav text-right">
-           {(name === "Sanodh" || "Dulsanda") && (
+         <ul className="navbar-nav text-right">
+           {(name === "Sanodh dulsanda") && (
              <li>
                <a className="nav-link" a href="/admindashboard">Admin Dashboard</a>
              </li>
            )}
            <li >
-              <a className="nav-link" a href="/matchl">Match</a>
-            </li>
-            <li >
               <a className="nav-link" a href="/leaderboard">Leaderboard</a>
             </li>
             <li >
               <a className="nav-link" a href="/viewmatches">View Match</a>
             </li>
             <li >
-            <Link className="nav-link" to={`/score/${name}`}>Score</Link>
-            </li>
-            <li >
               <a className="nav-link" a href="/profile">{name}</a>
             </li>
             <button className="btn btn-success ml-auto mr-1" onClick={logout}>Log Out</button>
-         </ui>
+         </ul>
        </div>
       </nav>
     <News />

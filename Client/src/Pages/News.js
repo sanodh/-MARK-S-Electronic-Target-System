@@ -28,15 +28,17 @@ function News() {
   };
 
   return (
-    <div>
-      <br></br>
-      <button type="button" class="btn btn-primary btn-lg btn-block" >
-        <a href="/addNews" class="text-decoration-none text-white">Add News</a></button>
-      <button type="button" class="btn btn-primary btn-lg btn-block" >
-        <a href="/dashboard" class="text-decoration-none text-white">Dashboard</a></button>
+    <div align="center">
       <br></br>
       <br></br>
-      <div className="card-columns" class="mx-auto">{newsComponent()}</div>
+      <button type="button" class="btn btn-outline-primary btn-lg" >
+        <a href="/addNews" class="text-decoration-none text-black">Add News &emsp; <i class="fa-solid fa-bullhorn"></i></a></button>
+      &emsp;&emsp;
+      <button type="button" class="btn btn-outline-warning btn-lg" >
+        <a href="/dashboard" class="text-decoration-none text-black">Dashboard &emsp; <i class="fa-solid fa-house"></i></a></button>
+      <br></br>
+      <br></br>
+      <div className="card-deck">{newsComponent()}</div>
     </div>
   );
 }
