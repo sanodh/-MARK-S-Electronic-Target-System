@@ -98,27 +98,26 @@ function Profile() {
                             <h4 class="text-right">Profile Settings</h4>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" onChange={(e) => setName(e.target.value)} value={name} readOnly /></div>
+                        <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" onChange={(e) => setName(e.target.value)} value={name} readOnly /></div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" onChange={(e) => setmobileNum(e.target.value)} /></div>
+                        <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" onChange={(e) => setmobileNum(e.target.value)} /></div>
                             <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" placeholder="enter address line 1" onChange={(e) => setAddress(e.target.value)} /></div>
                             <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" onChange={(e) => setemail(e.target.value)} placeholder="enter email id" value={email} readOnly /></div>
                             <div class="col-md-12"><label class="labels">School/Club Name</label><input type="text" class="form-control" placeholder="enter your school or club name" onChange={(e) => setOrganization(e.target.value)} /></div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" onChange={(e) => setCountry(e.target.value)} /></div>
+                        <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" onChange={(e) => setCountry(e.target.value)} /></div>
                             <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" placeholder="state" onChange={(e) => setState(e.target.value)} /></div>
                         </div>
-                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button" onClick={handleSubmit}>Save Profile</button></div>
-                        <div class="mt-5 text-center"><button class="btn btn-light profile-button" type="button" ><Link to={`/vprofile/${name}`} class="text-decoration-none">Profile</Link></button></div>
-                        <div class="mt-5 text-center"><button class="btn btn-light profile-button" type="button" ><a href="/dashboard" class="text-decoration-none">Dashboard</a></button></div>
+                        <div class="mt-5 text-center"><button class="btn btn-outline-primary profile-button" type="button" onClick={handleSubmit}>Save Profile</button></div>
+                        <div class="mt-5 text-center"><button class="btn btn-outline-info profile-button" type="button" ><Link to={`/vprofile/${name}`} class="text-decoration-none text-black">View Profile</Link></button></div>
+                        <div class="mt-5 text-center"><button class="btn btn-outline-warning profile-button" type="button" ><a href="/dashboard" class="text-decoration-none text-black">Dashboard</a></button></div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-3 py-5">
-                        <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span></div><br />
-                        <div class="col-md-12"><label class="labels">Age</label><input type="text" class="form-control" placeholder="Age" onChange={(e) => setAge(e.target.value)} /></div> <br />
+                    <div class="col-md-12"><label class="labels">Age</label><input type="text" class="form-control" placeholder="Age" onChange={(e) => setAge(e.target.value)} /></div> <br />
                         <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" onChange={(e) => setDescription(e.target.value)} /></div>
                     </div>
                 </div>

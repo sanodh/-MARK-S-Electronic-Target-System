@@ -36,32 +36,60 @@ function Dashboard() {
     <div>
       <nav className="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
         <a className="navbar-brand">Dashboard</a>&emsp;&emsp;&emsp;&emsp;
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-        <span className="navbar-toggler-icon"></span>
-
-       </button>
-       <div className="collapse navbar-collapse flex-grow-0" id="navbarSuportedContent">
-         <ul className="navbar-nav text-right">
-           {(name === "Sanodh dulsanda") && (
-             <li>
-               <a className="nav-link" a href="/admindashboard">Admin Dashboard</a>
-             </li>
-           )}
-           <li >
-              <a className="nav-link" a href="/leaderboard">Leaderboard</a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className="collapse navbar-collapse flex-grow-0"
+          id="navbarSuportedContent"
+        >
+          <ul className="navbar-nav text-right">
+            {name === "sanodh dulsanda" && (
+              <li>
+                <a className="nav-link font-weight-bold">
+                  {name} Welcome to admin Dashboard
+                </a>
+              </li>
+            )}
+            {name === "sanodh dulsanda" && (
+              <li>
+                <a className="nav-link" a href="/admindashboard">
+                  Admin Dashboard
+                </a>
+              </li>
+            )}
+            <li>
+              <a className="nav-link" a href="/leaderboard">
+                Leaderboard
+              </a>
             </li>
-            <li >
-              <a className="nav-link" a href="/viewmatches">View Match</a>
-            </li>
-            <li >
-              <a className="nav-link" a href="/profile">{name}</a>
-            </li>
-            <button className="btn btn-success ml-auto mr-1" onClick={logout}>Log Out</button>
-         </ul>
-       </div>
+            {name != "sanodh dulsanda" && (
+              <li>
+                <a className="nav-link" a href="/viewmatches">
+                  View Match
+                </a>
+              </li>
+            )}
+            {name != "sanodh dulsanda" && (
+              <li>
+                <a className="nav-link" a href="/profile">
+                  {name}
+                </a>
+              </li>
+            )}
+            <button className="btn btn-success ml-auto mr-1" onClick={logout}>
+              Log Out
+            </button>
+          </ul>
+        </div>
       </nav>
-    <News />
-    </div >
+      <News />
+    </div>
   );
 }
 
